@@ -69,6 +69,9 @@ function enroll(x, y){
 }
 console.log(enroll)
 
+//A product offer can be applied only if a person buys more than 2 items,
+// and the offer has not expired. Premium members do not need to buy a specific
+// amount of products.
 
 let isOfferValid = confirm("Is the offer still valid?");
 
