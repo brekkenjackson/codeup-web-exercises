@@ -6,17 +6,20 @@
 
 //console.log(myAge = " was my age!");//
 
-alert("Hello from external Javascript");
+console.log("Hello from external Javascript");
 
 alert("Welcome to my website!");
 
 let userInput = prompt("What is your favorite color?");
-console.log("My favorite color is white!" + userInput);
+
+alert("Wow, " + userInput +  " is my favorite color too!")
+//console.log("My favorite color is white!" + userInput);
 
 //You have rented some movies for your kids: The little mermaid (for 3 days),
 //Brother Bear (for 5 days, they love it), and Hercules (1 day, you don't know
 //yet if they're going to like it). If price for a movie per day is $3,
 //how much will you have to pay?
+
 
 let littleMermaid = 3;
 let brotherBear = 5;
@@ -32,7 +35,6 @@ function priceOfMovies(x, y, z){
 
 console.log(priceOfMovies(littleMermaid, brotherBear, hercules));
 
-//????????
 
 //Suppose you're working as a contractor for 3 companies: Google, Amazon and
 //Facebook, they pay you a different rate per hour. Google pays $400, Amazon $380,
