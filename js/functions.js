@@ -63,7 +63,7 @@ var random = Math.floor((Math.random() * 3) + 1);
  */
 
 function isTwo(x){
-    return x == 2;
+    return x === 2;
 }
 isTwo(random);
 console.log(isTwo(random));
