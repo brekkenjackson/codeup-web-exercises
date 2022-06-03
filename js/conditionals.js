@@ -29,7 +29,7 @@ function analyzeColor(color){
  if (color === "white") {
   return "My favorite color is white!"
  } else if (color === "pink") {
-  return "Real men wear " + "pink" + "!!!";
+  return "Real men wear pink !!!";
  } else {
   return "I'm sorry I am just not a huge fan of that color...";
  }
@@ -58,19 +58,19 @@ console.log(analyzeColor(randomColor));
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
 
-// let favColor = prompt("What is your favorite color?")
-//
-// switch(favColor) {
-//    case "white":
-//      alert("That's weird, that's my favorite color as well!");
-//      break;
-//    case "pink":
-//     alert("Yeah! REAL men wear pink!!");
-//     break;
-//    default:
-//     alert("I strongly dislike " + favColor + ", but that's just my opinion...")
-//     break;
-//}
+let favColor = prompt("What is your favorite color?")
+
+switch(favColor) {
+   case "white":
+     alert("That's weird, that's my favorite color as well!");
+     break;
+   case "pink":
+    alert("Yeah! REAL men wear pink!!");
+    break;
+   default:
+    alert("I strongly dislike " + favColor + ", but that's just my opinion...")
+    break;
+}
 
 /**
  * TODO:
@@ -79,9 +79,9 @@ console.log(analyzeColor(randomColor));
  * function to show it to the user.
  */
 
-// let userColor = prompt("What's your favorite color?");
-// analyzeColor(userColor)
-// alert("Your analyzed color is " + analyzeColor(userColor) + ".");
+let userColor = prompt("What's your favorite color?");
+analyzeColor(userColor)
+alert("Your analyzed color is " + analyzeColor(userColor) + ".");
 
 /* ########################################################################## */
 
@@ -134,12 +134,11 @@ console.log(calculateTotal(randomNum, total));
  */
 // Generate a random number between 0 and 6
 
-// let luckyNumber = Math.floor(Math.random() * 6);
-// let userInput = parseInt(prompt("Can you tell me the total of your bill?"));
-//
-// alert("Your lucky number was " + luckyNumber + "!");
-// alert("Your price before the discount was " + userInput + ". After the discount you only owe " + calculateTotal(luckyNumber, userInput));
+let luckyNumber = Math.floor(Math.random() * 6);
+let userInput = parseInt(prompt("Can you tell me the total of your bill?"));
 
+alert("Your lucky number was " + luckyNumber + "!");
+alert("Your price before the discount was " + userInput + ". After the discount you only owe " + calculateTotal(luckyNumber, userInput));
 
 /**
  * TODO:
@@ -155,8 +154,7 @@ console.log(calculateTotal(randomNum, total));
  * if the user enters a value that is not of the number data type.
  * Instead, use an alert to inform them of the incorrect input data type.
  *
- *
- * Can you refactor your code to use functions? ParseINT
+ * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
 if (confirm("Hi there! Would you like to play a game?")) {
