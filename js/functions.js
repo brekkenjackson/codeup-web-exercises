@@ -1,3 +1,5 @@
+{(function()
+
 "use strict";
 
 /**
@@ -96,7 +98,7 @@ console.log(calculateTip(0.2, 100));
 let tipAmount = parseFloat(prompt("Tip amount: %"));
 let billAmount = parseInt(prompt("Bill total: $"));
 
-alert("Your bill total after the tip is $" + calculateTip(tipAmount, billAmount));
+alert("You will tip $" + calculateTip(tipAmount, billAmount) + ".");
 
 /**
  * TODO:
@@ -118,3 +120,4 @@ function applyDiscount(originalPrice, discountPrice) {
     return (originalPrice * discountPrice)
 }
 console.log(applyDiscount(0.6, 75));
+})();

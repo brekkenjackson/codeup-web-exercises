@@ -21,6 +21,22 @@
  * Test your function by passing various string literals to it and
  * console.logging the function's return value
  */
+//create function(color)
+//return (color) is my fav color...
+//unknown color = "I dont know anything about" + color + "."
+
+function analyzeColor(color){
+ if (color === "white") {
+  return "My favorite color is white!"
+ } else if (color === "pink") {
+  return "Real men wear " + "pink" + "!!!";
+ } else {
+  return "I'm sorry I am just not a huge fan of that color...";
+ }
+}
+
+console.log(analyzeColor("blue"));
+
 
 // Don't change the next two lines!
 // These lines create two variables for you:
@@ -35,10 +51,26 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * You should see a different message every time you refresh the page
  */
 
+console.log(analyzeColor(randomColor));
+
 /**
  * TODO:
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
+
+let favColor = prompt("What is your favorite color?")
+
+switch(favColor) {
+   case "white":
+     alert("That's weird, that's my favorite color as well!");
+     break;
+   case "pink":
+    alert("Yeah! REAL men wear pink!!");
+    break;
+   default:
+    alert("I strongly dislike " + favColor + ", but that's just my opinion...")
+    break;
+}
 
 /**
  * TODO:
@@ -46,6 +78,10 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
+
+let userColor = prompt("What's your favorite color?");
+analyzeColor(userColor)
+alert("Your analyzed color is " + analyzeColor(userColor) + ".");
 
 /* ########################################################################## */
 
@@ -78,7 +114,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+ var luckyNumber = Math.floor(Math.random() * 6);
 
 /**
  * TODO:
