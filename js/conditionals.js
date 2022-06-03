@@ -58,19 +58,19 @@ console.log(analyzeColor(randomColor));
  * Comment out the code above, and refactor your function to use a switch-case statement
  */
 
-let favColor = prompt("What is your favorite color?")
-
-switch(favColor) {
-   case "white":
-     alert("That's weird, that's my favorite color as well!");
-     break;
-   case "pink":
-    alert("Yeah! REAL men wear pink!!");
-    break;
-   default:
-    alert("I strongly dislike " + favColor + ", but that's just my opinion...")
-    break;
-}
+// let favColor = prompt("What is your favorite color?")
+//
+// switch(favColor) {
+//    case "white":
+//      alert("That's weird, that's my favorite color as well!");
+//      break;
+//    case "pink":
+//     alert("Yeah! REAL men wear pink!!");
+//     break;
+//    default:
+//     alert("I strongly dislike " + favColor + ", but that's just my opinion...")
+//     break;
+//}
 
 /**
  * TODO:
@@ -79,9 +79,9 @@ switch(favColor) {
  * function to show it to the user.
  */
 
-let userColor = prompt("What's your favorite color?");
-analyzeColor(userColor)
-alert("Your analyzed color is " + analyzeColor(userColor) + ".");
+// let userColor = prompt("What's your favorite color?");
+// analyzeColor(userColor)
+// alert("Your analyzed color is " + analyzeColor(userColor) + ".");
 
 /* ########################################################################## */
 
@@ -104,6 +104,25 @@ alert("Your analyzed color is " + analyzeColor(userColor) + ".");
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+let randomNum = Math.floor(Math.random() * 6);
+let total = 100;
+    function calculateTotal(randomNum, total) {
+    if (randomNum === 0) {
+        return total
+    } else if (randomNum === 1) {
+        return total - (total * .1);
+    } else if (randomNum === 2) {
+        return total - (total * .25);
+    } else if (randomNum === 3) {
+        return total - (total * .35);
+    } else if (randomNum === 4) {
+        return total - (total * .5);
+    } else if (randomNum === 5) {
+        return total - (total * 1);
+    }
+}
+
+console.log(calculateTotal(randomNum, total));
 
 /**
  * TODO:
@@ -114,7 +133,13 @@ alert("Your analyzed color is " + analyzeColor(userColor) + ".");
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
- var luckyNumber = Math.floor(Math.random() * 6);
+
+// let luckyNumber = Math.floor(Math.random() * 6);
+// let userInput = parseInt(prompt("Can you tell me the total of your bill?"));
+//
+// alert("Your lucky number was " + luckyNumber + "!");
+// alert("Your price before the discount was " + userInput + ". After the discount you only owe " + calculateTotal(luckyNumber, userInput));
+
 
 /**
  * TODO:
@@ -131,6 +156,33 @@ alert("Your analyzed color is " + analyzeColor(userColor) + ".");
  * Instead, use an alert to inform them of the incorrect input data type.
  *
  *
- * Can you refactor your code to use functions?
+ * Can you refactor your code to use functions? ParseINT
  * HINT: The way we prompt for a value could be improved
  */
+if (confirm("Hi there! Would you like to play a game?")) {
+
+    let userNum = parseInt(prompt("What is your lucky number?"));
+    if (isNaN(userNum) === false) {
+        alert("Data type correct, lets play the game!");
+        if (userNum % 2 === 0) {
+            alert("Your number is even.");
+        } else {
+            alert("Your number is odd.");
+        }
+
+        alert("Your number plus 100 is " + (userNum + 100) + ".");
+
+        if (userNum > 0) {
+            alert("Your number is positive");
+        } else if (userNum === 0) {
+            alert("Your number is zero");
+        } else {
+            alert("Your number is negative");
+        }
+    } else {
+        alert("Data type INCORRECT! Try again with a NUMBER>:O");
+    }
+
+} else {
+    alert("I didn't want you to play anyway...");
+}
