@@ -79,9 +79,9 @@ switch(favColor) {
  * function to show it to the user.
  */
 
-let userColor = prompt("What's your favorite color?");
-analyzeColor(userColor)
-alert("Your analyzed color is " + analyzeColor(userColor) + ".");
+let userFav = prompt("What's your favorite color?");
+analyzeColor(userFav)
+alert(analyzeColor(userFav) );
 
 /* ########################################################################## */
 
