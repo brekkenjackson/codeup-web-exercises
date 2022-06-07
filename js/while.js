@@ -2,14 +2,12 @@
 
 
 (function () {
-    function timesTwo () {
-        let num = 1;
-        while (num < 65536) {
-            num *= 2;
-            console.log(num);
-        }
+
+    let num = 1;
+    while (num < 65536) {
+        num *= 2;
+        console.log(num);
     }
-timesTwo();
 
 
 function iceCreamTruckCompany() {
@@ -32,6 +30,5 @@ function iceCreamTruckCompany() {
 }
 
 iceCreamTruckCompany();
-
 
 })();
