@@ -1,7 +1,6 @@
 "use strict";
 
 
-(function () {
 
     let num = 1;
     while (num < 65536) {
@@ -31,4 +30,3 @@ function iceCreamTruckCompany() {
 
 iceCreamTruckCompany();
 
-})();
