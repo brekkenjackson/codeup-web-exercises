@@ -9,6 +9,7 @@
 
     let names = ['Rob', 'Kenneth', 'Billy', 'Sam']
 
+
     /**
      * TODO:
      * Create a log statement that will log the number of elements in the names
