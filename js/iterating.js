@@ -36,7 +36,7 @@
      */
 
     for (let i = 0; i < names.length; i++) {
-        console.log('The name at index is ' + i + ' is ' + names[i]);
+        console.log('The name at index ' + i + ' is ' + names[i]);
     }
 
     /**
