@@ -27,7 +27,7 @@
      */
 
 person.sayHello = function () {
-    console.log("Hello from Brekken Jackson! :O");
+    console.log("Hello from " + person.firstName + " " + person.lastName + "! :O");
 }
 person.sayHello();
 
@@ -142,7 +142,7 @@ person.sayHello();
     books.forEach(function(book) {
         console.log("Book # " + books.indexOf(book) + ", Title: " + book.title + ", Author: " + book.author.firstName + " " + book.author.lastName)
     });
-    
+
         /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
