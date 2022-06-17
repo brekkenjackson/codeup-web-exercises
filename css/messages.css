@@ -5,3 +5,33 @@ body, html {
     margin: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
+
+.message {
+    border-color: darkgray;
+    border-radius: 10px;
+    height: 20px;
+    text-align: left;
+    margin: 5px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.message-info {
+    background-color: lightblue;
+    color: darkblue;
+}
+
+.message-success {
+    background-color: #cbffcd;
+    color: darkgreen;
+}
+
+.message-warning {
+    background-color: lightgoldenrodyellow;
+    color: darkgoldenrod;
+}
+
+.message-error {
+    background-color: pink;
+    color: darkred;
+}
