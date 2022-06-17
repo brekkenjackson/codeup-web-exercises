@@ -2,3 +2,7 @@
     color: purple; /* single line comment */
     text-decoration: underline;
 }
+body {
+    height: 150vh;
+    background-image: url('https://kimetsu-no-yaiba.fandom.com/wiki/Giyu_Tomioka');
+}
