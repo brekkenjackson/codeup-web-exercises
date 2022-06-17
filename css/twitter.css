@@ -101,7 +101,7 @@ a {
     padding: 0;
     margin: 30px 12px;
 }
-.media{
+.media {
     position: center;
     width: 100%;
     background-color: #FFF;
@@ -109,9 +109,16 @@ a {
     padding: .5em;
     overflow: auto;
 }
-.media-body{
+.media-body {
     float: top;
 }
-.media-image{
-max-width: 50px;
+.media-image {
+    max-width: 50px;
+}
+.profile-entry {
+    padding: .5em;
+    marker: none;
+}
+.profile-items{
+    marker: none;
 }
