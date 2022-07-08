@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script type="text/javascript" src="js/jquery.js"></script>
 </head>
 <body>
 
 <div class="docRob" id="theBeard">
-    <h1 class="cody" id="theMan">Whats that under there?</h1>
-    <p class="para" id="theText">Under where??</p>
+    <h1 class="" id="theMan">Whats that under there?</h1>
+    <p class="codeup" id="theText">Under where??</p>
 </div>
-<div class="codi" id="theDuck">
-    <ul class="unOrder" id="unOrdered">
+<div class="codi" id="codeup">
+    <ul class="codeup" id="unOrdered">
         <li>Demon Slayer</li>
         <li>Naruto</li>
         <li>Attack On Titan</li>
@@ -19,14 +20,25 @@
 </div>
 
 <script>
-        alert( 'The DOM has finished loading!' );
+        // alert( 'The DOM has finished loading!' );
 
     //ID Selector Exercise
-    let contents = $("#theBeard").html();
-    alert(contents);
+    //     let manlyMessage = document.querySelector("#theMan")
+    //     alert(manlyMessage)
+
+
+    //Class Selector exercise
+    //          document.querySelector('.codeup').style.border = '1px solid red';
+
+    //Element Selector exercises
+        document.querySelector('li').style.fontSize = '20px';
+        document.querySelectorAll('li');
+        document.querySelectorAll('p');
+        document.querySelectorAll('h1');
+        alert(document.querySelectorAll('h1'));
+        document.querySelectorAll('h1, p, li')
 
 </script>
 
-<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
 </body>
 </html>
