@@ -9,9 +9,16 @@
             visibility: hidden;
             /*display: none;*/
         }
-        ​
+
         .green-background {
             background-color: green;
+        }
+
+        .header {
+                border: white;
+                background: white;
+                font-size: 20px;
+                font-weight: bold;
         }
     </style>
 </head>
@@ -54,24 +61,27 @@
 <button id="inviso-toggle">Toggle Visibility</button>
 
 
-<h3>Big Bend</h3>
+
 <ul>
+    <h3 class="head">Big Bend</h3>
     <li class="fact">Big Bend National Park covers a total area of 801,163 acres.</li>
     <li class="fact">The number of people visiting Big Bend in 2019 was 463,832 (All Years)</li>
     <li class="fact">Big Bend was made a national park on June 20, 1935.</li>
     <li class="fact">The lowest elevation found in Big Bend is 1,715 feet at the Rio Grande River.</li>
 </ul>
 
-<h3>Grand Canyon</h3>
+
 <ul>
+    <h3 class="head">Grand Canyon</h3>
     <li class="fact">he Grand Canyon is bigger than the state of Rhode Island.</li>
     <li class="fact">Hidden caves abound in the canyon.</li>
     <li class="fact">The Grand Canyon is one of the most visited national parks in the United States.</li>
     <li class="fact">The Grand Canyon was carved over some 6 million years.</li>
 </ul>
 
-<h3>Yellowstone</h3>
+
 <ul>
+    <h3 class="head">Yellowstone</h3>
     <li class="fact">There are more than 10,000 hydrothermal features in Yellowstone</li>
     <li class="fact">Yellowstone is home to more than 500 active geysers (more than half the world's geysers).</li>
     <li class="fact">Yellowstone encompasses 3,472 square miles (2,221,766 acres) which makes it larger than Rhode Island and Delaware combined. </li>
@@ -109,25 +119,37 @@
 
     //3.
     const btn = document.getElementById("btn");
-    btn.addEventListener("click", function (){
+    btn.addEventListener("click", function (event){
         const allUL = document.querySelectorAll("ul");
         allUL.forEach(function (ul){
             ul.lastElementChild.style.backgroundColor = 'yellow';
         })
     })
 
-    //4.
-    // const headingClick = document.querySelectorAll("h3");
-    // headingClick.addEventListener("click", function (){
-    //     const allUL2 = document.querySelectorAll("ul");
-    //     allUL2.forEach(function (ul) {
-    //         ul.children.style.fontWeight = 'bold';
+     //4.
+    // const header = document.getElementsByClassName("header");
+    // header.addEventListener("click", function (){
+    //     const listUL = document.querySelectorAll("h3");
+    //     listUL.forEach(function (h3) {
+    //         // this.parentElement.children.style.fontWeight = 'bold'
+    //         h3.parentElement.children.style.fontWeight = 'bold';
     //     })
     // })
 
-    const headingClick = document.querySelectorAll("h3");
-    headingClick.addEventListener("click", function (){
+    const listH3 = document.querySelectorAll("h3");
+    listH3.forEach(function (h3){
+        h3.addEventListener("click", function (event){
+            this.nextElementSibling.style.fontWeight = 'bold';
+        })
 
     })
+
+    const lis = document.querySelectorAll("li");
+    lis.forEach(function (li){
+        li.addEventListener("click", function (event){
+            this.parentElement.firstElementChild.style.fontColor = 'blue';
+        })
+    })
+
 
 </script>

@@ -22,11 +22,27 @@
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <script>
-(function() {
+(async function() {
     "use strict";
     // TODO: Create an AJAX GET request for the file under data/inventory.json
 
+    const tools = await fetch("../data/inventory.json")
+        .then(async function(response) {
+            if(response.status !== 200) {
+                console.log("cannot read tools file");
+                return "";
+            } else
+                return await response.json();
+        });
+    for (let i = 0; i < tools.length; i++) {
+        console.log(tools[i]);
+    }
+
     // TODO: Take the data from inventory.json and append it to the products table
+//use dom to add rows with querySelector("#insertProducts")
+
+
+
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
