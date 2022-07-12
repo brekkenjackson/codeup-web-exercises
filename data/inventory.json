@@ -1,3 +1,4 @@
+
 [
     {
         "title": "Hammer",
@@ -11,7 +12,7 @@
         "quantity": 5,
         "categories": [
             "tool",
-            "powered"
+            " powered"
         ],
         "price": 100
     }, {
@@ -19,16 +20,25 @@
         "quantity": 5,
         "categories": [
             "tool",
-            "gas",
-            "outdoor"
+            " gas",
+            " outdoor"
         ],
         "price": 200
     }, {
-        "title": "Screwdrivers",
+        "title": "Screwdriver",
         "quantity": 25,
         "categories": [
             "tool"
         ],
         "price": 10
+    }, {
+        "title": "Leaf Blower",
+        "quantity": 10,
+        "categories": [
+            "tool",
+            " gas",
+            " outdoor"
+        ],
+        "price": 150
     }
 ]

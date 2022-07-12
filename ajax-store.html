@@ -2,6 +2,27 @@
 <html>
 <head>
     <title>Online Store</title>
+    <style>
+        html, body {
+            font-family: Krub,serif;
+            background-color: darkgray;
+        }
+
+        h1 {
+            font-weight: bold;
+            font-family: Galvji,serif;
+            color: cornflowerblue;
+        }
+
+        .btn {
+            color: navajowhite;
+            background-color: cornflowerblue;
+            border-color: navajowhite;
+            font-family: Herculanum,serif;
+            font-weight: bolder;
+        }
+
+    </style>
 </head>
 <body>
 
@@ -18,6 +39,9 @@
     </thead>
     <tbody id="insertProducts"></tbody>
 </table>
+
+<button id="refresh-btn" class="btn" type="button">Refresh</button>
+
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
@@ -41,11 +65,41 @@
     // TODO: Take the data from inventory.json and append it to the products table
 //use dom to add rows with querySelector("#insertProducts")
 
+function makeRow(row) {
+    let rowHTML = "";
+    rowHTML += `
+        <tr>
+            <td>${row.title}</td>
+            <td>${row.quantity}</td>
+            <td>${row.price}</td>
+            <td>${row.categories}</td>
+        </tr>
+        `
 
+    return rowHTML;
+}
+
+    function makeRows(rows) {
+        let rowsHTML = "";
+        for (let i = 0; i < rows.length; i++) {
+            rowsHTML += makeRow(rows[i]);
+        }
+        return rowsHTML
+    }
+
+    const tBody = document.querySelector("#insertProducts");
+    tBody.innerHTML = makeRows(tools)
 
     //       HINT: Your data should come back as a JSON object; use console.log() to inspect
     //             its contents and fields
     //       HINT: You will want to target #insertProducts for your new HTML elements
+
+    const refreshBtn = document.querySelector("#refresh-btn");
+    function reload(){
+        reload=location.reload();
+    }
+    refreshBtn.addEventListener("click", reload, false)
+
 })();
 </script>
 
