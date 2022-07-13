@@ -16,5 +16,12 @@
             "sugar"
         ],
         "date": "February 14, 2015"
-    }
+    }, {
+    "title": "Bjack's Blog Post",
+    "content": "I like Call of Duty, Rocket League, and anime. I also enjoy streetwear and cool hats. I am sneakerhead and I would give up food and water for shoes if it was a valid possibility. Demon Slayer: Kimetsu no Yaiba is a Japanese manga series written and illustrated by Koyoharu Gotouge. It follows teenage Tanjiro Kamado, who strives to become a demon slayer after his family was slaughtered and his younger sister, Nezuko, turned into a demon.",
+    "categories": [
+        "interests, myself, demon slayer"
+    ],
+    "date": "July 13, 2022"
+}
 ]

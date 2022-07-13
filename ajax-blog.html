@@ -9,6 +9,25 @@
             background-color: mistyrose;
             color: saddlebrown;
         }
+
+        header {
+            font-weight: bold;
+            color: #3B94D9;
+            font-size: 25px;
+            margin: 1em 10px;
+        }
+
+        section {
+            font-size: 15px;
+            margin: 10px;
+            color: #848487;
+            border: dashed cornflowerblue;
+        }
+
+        article {
+            margin: 10px 20px;
+        }
+
     </style>
 </head>
 <body>
@@ -16,6 +35,35 @@
     <div id="posts">
 
     </div>
+
+<script>
+    (async function() {
+        "use strict";
+
+    const posts = await fetch("../data/blog.json")
+        .then(async function(response) {
+            if(response.status !== 200) {
+                console.log("cannot read blogs file");
+                return "";
+            } else
+                return await response.json();
+        });
+    console.log(posts);
+
+        for (let i = 0; i < posts.length; i++) {
+            console.log(posts[i])
+
+
+            let statusUpdates = document.querySelector("#posts")
+            statusUpdates.innerHTML += `
+        <header>${posts[i].title}</header>
+        <section>${posts[i].date}</section>
+        <article>${posts[i].content}</article>
+        <footer><${posts[i].categories}/footer>
+        `
+        }
+})();
+</script>
 
 </body>
 </html>
