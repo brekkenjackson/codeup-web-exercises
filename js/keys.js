@@ -1,1 +1,2 @@
 const MAPBOX_API_KEY = "pk.eyJ1IjoiY29keWg0MiIsImEiOiJjbDVsNGE0eDUwZm9oM21ud2xvYWVjMmpnIn0.vMa_7rEZz6psxH8Pwnvr0A";
+const WEATHERMAP_API_KEY = "652a58aab8a41fa442961f30c5702ee8";
