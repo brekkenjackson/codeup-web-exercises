@@ -10,7 +10,7 @@ mapboxgl.accessToken = MAPBOX_API_KEY;
 let map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/navigation-night-v1',
-    zoom: 10,
+    zoom: 8,
     center: [-98.4916, 29.4252]
 });
 
