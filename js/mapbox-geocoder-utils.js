@@ -25,6 +25,44 @@ function geocode(search, token) {
         });
 }
 
+// function onClicker() {
+//     let longi2 = marker.getLngLat().lng;
+//     let latit2 = marker.getLngLat().lat;
+//     let draggedMarker2 = new URLSearchParams({
+//         APPID: WEATHERMAP_API_KEY,
+//         lat: latit2,
+//         lon: longi2,
+//         units: "imperial"
+//     })
+//     updateWeather(draggedMarker2);
+// }
+// let submitBTN2 = document.querySelector("#search-btn");
+// submitBTN2.addEventListener("click", onClicker);
+
+
+let submitBTN = document.querySelector("#search-btn");
+let searchInput = document.querySelector("#search-input");
+submitBTN.addEventListener("click", function centerOnClick(e)  {
+    e.preventDefault()
+    geocode(searchInput.value, MAPBOX_API_KEY)
+        .then(function(result) {
+            console.log(result);
+            map.setCenter(result);
+            map.setZoom(9);
+        });
+});
+
+function moveMarkerToSearchResultCenter(e) {
+    e.preventDefault()
+    geocode(searchInput.value, MAPBOX_API_KEY)
+        .then(function(result) {
+            map.setCenter(result);
+            map.setZoom(9);
+            marker.setLngLat(result)
+            updateWeather(marker)
+        });
+
+}
 
 /***
  * reverseGeocode is a method to search for a physical address based on inputted coordinates
