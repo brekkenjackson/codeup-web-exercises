@@ -67,16 +67,23 @@ marker.on('dragend', onDragEnd);
 
 submitBTN.addEventListener("click", moveMarkerToSearchResultCenter);
 
-function onClicker() {
-    let longi2 = marker.getLngLat().lng;
-    let latit2 = marker.getLngLat().lat;
-    let draggedMarker2 = new URLSearchParams({
-        APPID: WEATHERMAP_API_KEY,
-        lat: latit2,
-        lon: longi2,
-        units: "imperial"
-    })
-    updateWeather(draggedMarker2);
-}
+function moveMarkerToSearchResultCenter(e) {
+    e.preventDefault()
+    geocode(searchInput.value, MAPBOX_API_KEY)
+        .then(function(result) {
+            map.setCenter(result);
+            map.setZoom(8);
+            marker.setLngLat(result)
+            updateWeather(marker)
+            let longi2 = marker.getLngLat().lng;
+            let latit2 = marker.getLngLat().lat;
+            let draggedMarker2 = new URLSearchParams({
+                APPID: WEATHERMAP_API_KEY,
+                lat: latit2,
+                lon: longi2,
+                units: "imperial"
+            })
+            updateWeather(draggedMarker2);
+        });
 
-submitBTN.addEventListener("click", onClicker);
+}
