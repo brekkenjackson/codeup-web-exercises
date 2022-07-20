@@ -1,3 +1,3 @@
 const MAPBOX_API_KEY = "pk.eyJ1IjoiY29keWg0MiIsImEiOiJjbDVsNGE0eDUwZm9oM21ud2xvYWVjMmpnIn0.vMa_7rEZz6psxH8Pwnvr0A";
 const WEATHERMAP_API_KEY = "652a58aab8a41fa442961f30c5702ee8";
-const GITHUB_API_KEY = "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";
+const GITHUB_API_KEY = "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";
