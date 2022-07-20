@@ -3,3 +3,9 @@
 .DS_Store
 
 keys.js
+
+
+private_constants.js
+config.js
+application.properties
+.env
