@@ -17,14 +17,6 @@ export default function Home(props) {
         </main>
     `;
 }
-
 export function HomeEvents() {
-    // TODO: use an enum for message type
-    // const authority = getUserRole();
-    const user = getUser();
-    if(!user) {
-        showNotification("Welcome visitor", "secondary");
-    } else {
-        showNotification("Welcome " + user.userName, "info");
-    }
+
 }
