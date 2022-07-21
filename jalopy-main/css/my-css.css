@@ -1,0 +1,14 @@
+.home-title {
+    display: flex;
+    justify-content: center;
+}
+
+#image-one {
+    display: flex;
+    margin: auto;
+    max-width: 300px;
+}
+
+#img-button {
+    height: 50px;
+}
