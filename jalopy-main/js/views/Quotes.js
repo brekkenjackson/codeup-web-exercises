@@ -6,7 +6,7 @@ return `
 <h1>Quotes</h1>
 <div id="my-quotes">
 </div>
-<button id="add-quote">Add Quote PLZ</button>`;
+<button type="button" class="btn btn-outline-dark" id="add-quote">Add Quote PLZ</button>`;
 
 }
 
